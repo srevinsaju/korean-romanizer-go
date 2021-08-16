@@ -92,7 +92,7 @@ func NewRomanizer(text string) Romanizer {
 	return Romanizer{text: text}
 }
 
-func (r *Romanizer) Romanize() (string, error) {
+func (r *Romanizer) Romanize() string {
 	pronounced := NewPronouncer(r.text).pronounced
 	// hangul := "[가-힣ㄱ-ㅣ]"
 	romanized := ""
@@ -108,5 +108,5 @@ func (r *Romanizer) Romanize() (string, error) {
 			romanized += string(runeValue)
 		}
 	}
-	return romanized, nil
+	return romanized
 }
