@@ -1,2 +1,2 @@
 builds:
-  main: ./cmd/korean_romanizer
+  - main: ./cmd/korean_romanizer
