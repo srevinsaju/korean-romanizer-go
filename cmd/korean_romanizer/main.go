@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"fmt"
 	k "github.com/srevinsaju/korean-romanizer-go"
-	"log"
 	"os"
 )
 
@@ -13,10 +12,7 @@ func main() {
 
 	for input.Scan() {
 		r := k.NewRomanizer(input.Text())
-		romanized, err := r.Romanize()
-		if err != nil {
-			log.Fatalln(err)
-		}
+		romanized := r.Romanize()
 		fmt.Println(romanized)
 	}
 }
