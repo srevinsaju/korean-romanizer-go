@@ -110,5 +110,9 @@ func FinalToInitial(char rune) rune {
 	if idx == -1 {
 		idx = IndexRune(unicodeCompatibleInitials, char)
 	}
-	return GetUnicodeInitial()[idx]
+	if idx != -1 {
+		return GetUnicodeInitial()[idx]
+	} else {
+		return char
+	}
 }
